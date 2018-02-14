@@ -15,7 +15,7 @@ namespace EverNoteAutomation
 
         public static void GoTo()
         {
-            LeftNavigation.AddNote.Select();            
+            LeftNavigation.NewNote.Select();            
         }
 
         public static CreateNoteCommand CreateNote(string title)

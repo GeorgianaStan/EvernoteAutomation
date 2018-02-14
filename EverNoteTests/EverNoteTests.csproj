@@ -60,6 +60,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AllNotesTests.cs" />
     <Compile Include="SmokeTests\CreateNoteTests.cs" />
     <Compile Include="Utilities\EvernoteTest.cs" />
     <Compile Include="SmokeTests\LoginTest.cs" />
