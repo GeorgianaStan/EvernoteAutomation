@@ -65,5 +65,13 @@
                 MenuSelector.Select("gwt-debug-Sidebar-tagsButton-container");
             }
         }
+
+        public class Account
+        {
+            public static void Select()
+            {
+                MenuSelector.Select("gwt-debug-AccountMenu-avatar");
+            }
+        }
     }
 }

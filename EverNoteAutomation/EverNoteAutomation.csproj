@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="Navigation\LeftNavigation.cs" />
     <Compile Include="Navigation\MenuSelector.cs" />
+    <Compile Include="Pages\NewMeetingNotePage.cs" />
     <Compile Include="Pages\NewNotePage.cs" />
     <Compile Include="Pages\NotesPage.cs" />
     <Compile Include="Selenium\Driver.cs" />

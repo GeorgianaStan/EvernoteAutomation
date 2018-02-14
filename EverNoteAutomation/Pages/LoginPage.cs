@@ -6,6 +6,14 @@ namespace EverNoteAutomation
 {
     public class LoginPage
     {
+        public static bool IsAt
+        {
+            get
+            {
+               return (Driver.Instance.FindElement(By.LinkText("Log in")).Text == "Log in") ? true : false;
+            }
+        }
+
         public static void GoTo()
         {
             Driver.Instance.Navigate().GoToUrl(Driver.BaseAddress);
