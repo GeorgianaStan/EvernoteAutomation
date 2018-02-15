@@ -20,8 +20,7 @@ namespace EverNoteTests
             LoginPage.LoginAs("georgi.pluralsight27@gmail.com").Continue().WithPassword("georgiana").Login();
 
             //create a basic note
-            NewNotePage.GoTo();
-            NewNotePage.CreateNote("This is a basic note title").WithContent("Hi, this is the content").Done();
+            NoteCreator.CreateNote();
         }
 
        
@@ -29,19 +28,19 @@ namespace EverNoteTests
         public void CanEditAnExistingNote()
         {
             NotesPage.GoTo();
-            NotesPage.SelectNote("This is a basic note title");
+            NotesPage.SelectNote(NoteCreator.PreviousTitle);
 
             Driver.Wait(TimeSpan.FromSeconds(1));
 
             Assert.IsTrue(NewNotePage.IsInUpgradeMode(), "Wasn't in upgrade mode");
-            Assert.AreEqual("This is a basic note title", NotesPage.Title, "Title din not match");
+            Assert.AreEqual(NoteCreator.PreviousTitle, NotesPage.Title, "Title din not match");
         }
 
         [TearDown]
         public void CleanUp()
         {
             //delete the basic note created in the setup
-            NotesPage.TrashNote("This is a basic note title");
+            NotesPage.TrashNote(NoteCreator.PreviousTitle);
             
             Driver.Close();
         }

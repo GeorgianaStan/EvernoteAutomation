@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using OpenQA.Selenium;
+using System;
 
 namespace EverNoteAutomation.Pages
 {
@@ -11,6 +8,12 @@ namespace EverNoteAutomation.Pages
         public static void GoTo()
         {
             LeftNavigation.NewMeetingNote.Select();
+        }
+
+        public static void CreateAnBlankMeetingNote()
+        {
+            Driver.Instance.FindElement(By.CssSelector(".GJDCG5CBD.GJDCG5CFEB")).Click();
+            Driver.Wait(TimeSpan.FromSeconds(2));
         }
     }
 }

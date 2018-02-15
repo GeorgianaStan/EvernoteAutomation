@@ -42,7 +42,7 @@ namespace EverNoteAutomation.Pages
         {
             var searchInput = Driver.Instance.FindElement(By.Id("gwt-debug-searchViewSearchBox"));
             searchInput.SendKeys(title);
-            Driver.Wait(TimeSpan.FromSeconds(2));
+            Driver.Wait(TimeSpan.FromSeconds(4));
             searchInput.SendKeys(Keys.Enter);
         }
             

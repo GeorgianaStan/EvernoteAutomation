@@ -19,20 +19,17 @@ namespace EverNoteTests
             NotesPage.StoreCount();
 
             //Add a new note
-            NewNotePage.GoTo();
-            NewNotePage.CreateNote("Added notes show up, title")
-                       .WithContent("Added notes show up, content")
-                       .Done();
+            NoteCreator.CreateNote();
 
             //Go to Notes, get new note count
             LeftNavigation.Notes.Select();
             Assert.AreEqual(NotesPage.PreviousNoteCount + 1, NotesPage.CurrentNoteCount, "Count of notes did not increase");
 
             //Check for added note
-            Assert.IsTrue(NotesPage.DoesNoteExistWithTitle("Added notes show up, title"));
+            Assert.IsTrue(NotesPage.DoesNoteExistWithTitle(NoteCreator.PreviousTitle));
 
             //Trash note (clean up) 
-            NotesPage.TrashNote("Added notes show up, title");
+            NotesPage.TrashNote(NoteCreator.PreviousTitle);
             Assert.AreEqual(NotesPage.PreviousNoteCount, NotesPage.CurrentNoteCount, "Coundn't trah note");
         }
     }
