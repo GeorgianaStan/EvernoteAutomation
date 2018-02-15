@@ -54,6 +54,7 @@
     <Compile Include="Pages\NewMeetingNotePage.cs" />
     <Compile Include="Pages\NewNotePage.cs" />
     <Compile Include="Pages\NotesPage.cs" />
+    <Compile Include="Pages\SearchPage.cs" />
     <Compile Include="Selenium\Driver.cs" />
     <Compile Include="Pages\LoginPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

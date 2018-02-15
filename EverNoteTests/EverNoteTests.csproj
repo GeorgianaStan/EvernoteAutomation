@@ -63,6 +63,7 @@
   <ItemGroup>
     <Compile Include="AllNotesTests.cs" />
     <Compile Include="SmokeTests\CreateNoteTests.cs" />
+    <Compile Include="SmokeTests\SearchNoteTests.cs" />
     <Compile Include="Utilities\EvernoteTest.cs" />
     <Compile Include="SmokeTests\LoginTest.cs" />
     <Compile Include="SmokeTests\NoteTest.cs" />
